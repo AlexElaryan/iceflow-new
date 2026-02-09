@@ -25,8 +25,11 @@ body {
     color: #1A1E1C;
     font-size: 16px;
     font-weight: 400;
-    background: #F5F4F0;
     font-family: TTNeorisTrialVariable, serif;
+    background-image: url(../images/intro-bg.png);
+    background-color: #F5F4F0;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 button,
@@ -66,9 +69,10 @@ a {
 }
 
 .intro {
-    background: url(../images/intro-bg.png);
-    background-size: cover;
-    min-height: 100vh;
+    /* background-size: cover; */
+    height: 100vh;
+    min-height: 920px;
+    /* min-height: 100vh; */
     padding: 27px 48px;
 }
 
@@ -143,6 +147,9 @@ header nav ul li a {
 
 .intro-top>img {
     max-width: 1050px;
+    width: fit-content;
+    object-fit: cover;
+    height: clamp(100px, 43vh - 287px, 229px);
 }
 
 .text-33 {
@@ -623,7 +630,7 @@ footer a {
     object-fit: cover;
 }
 
-@media screen and (max-width:1550px) {
+@media screen and (max-width:1600px) {
     .title {
         font-size: 60px;
     }
@@ -638,6 +645,18 @@ footer a {
 
     .states-right {
         gap: 20px;
+    }
+
+    .condition>div {
+        gap: 40px;
+    }
+
+    .condition-item {
+        padding: 25px;
+    }
+
+    .text-33 {
+        font-size: 28px;
     }
 }
 
@@ -769,6 +788,16 @@ footer a {
 
     .intro-top>img {
         width: 100%;
+        max-width: 100%;
+        height: fit-content;
+    }
+
+    body {
+        background-image: none;
+    }
+
+    .intro {
+        min-height: fit-content;
     }
 
     .text-33 {
@@ -1008,7 +1037,7 @@ footer a {
         position: absolute;
         bottom: 30px;
         left: 24px;
-        width: calc(100% - 48px); 
+        width: calc(100% - 48px);
     }
 
     .states-left {
@@ -1017,6 +1046,10 @@ footer a {
 
     .states-left img {
         margin-left: 12%;
+    }
+
+    .condition {
+        padding-top: 30px;
     }
 }
 
@@ -1106,6 +1139,7 @@ footer a {
         align-items: flex-end;
         gap: 22px;
     }
+
     .intro-bottom h2 span {
         flex-shrink: 0;
     }
