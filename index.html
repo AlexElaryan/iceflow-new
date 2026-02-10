@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
@@ -16,11 +17,11 @@
             <div>
                 <nav class="burger-menu">
                     <ul>
-                        <li><a href>Главная</a></li>
-                        <li><a href>Каталог</a></li>
-                        <li><a href>Система IceFlow</a></li>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#condition">Система IceFlow</a></li>
                         <li><a href>Блог</a></li>
-                        <li><a href>Партнерам</a></li>
+                        <li><a href="#footer">Партнерам</a></li>
                     </ul>
                     <div class="header-right mob">
                         <div class="socials">
@@ -92,7 +93,7 @@
         </div>
     </div>
 
-    <div class="condition cont">
+    <div class="condition cont" id="condition">
         <h2 class="title"><span class="orange-txt">IceFlow</span>
             - это система управления состоянием.</h2>
         <p class="substitle">Каждый продукт отвечает за своё состояние в определённой жизненной ситуации.</p>
@@ -145,19 +146,27 @@
     </div>
 
     <div class="states cont">
-        <div class="states-left">
-            <img src="images/bottles-2.PNG" alt="bottles">
-        </div>
-        <div class="states-right">
+        <div>
+            <p class="title"><span class="orange-txt">3 состояния</span> - одно решение</p>
             <div>
-                <p class="title"><span class="orange-txt">три состояния</span> - одно решение</p>
-                <p class="text-33"><span class="orange-txt">ICEFLOW </span> - создан для людей, которые
-                    выбирают осознанный образ жизни,
-                    которые хотят научиться управлять
-                    своим состоянием и восстанавливать
-                    ресурс естественным способом.</p>
+                <div class="states-left">
+                    <p class="text-33 mob"><span class="orange-txt">ICEFLOW </span> - создан для людей, которые
+                        выбирают осознанный образ жизни,
+                        которые хотят научиться управлять
+                        своим состоянием и восстанавливать
+                        ресурс естественным способом.</p>
+                    <img class="desktop" src="images/bottles-2.PNG" alt="bottles">
+                    <img class="mob" src="images/bottles-mb.png" alt="bottles">
+                </div>
+                <div class="states-right">
+                    <p class="text-33 desktop"><span class="orange-txt">ICEFLOW </span> - создан для людей, которые
+                        выбирают осознанный образ жизни,
+                        которые хотят научиться управлять
+                        своим состоянием и восстанавливать
+                        ресурс естественным способом.</p>
+                    <button class="orange-btn">перейти в каталог</button>
+                </div>
             </div>
-            <button class="orange-btn">перейти в каталог</button>
         </div>
     </div>
 
@@ -166,6 +175,16 @@
             для которых состояние
             <span class="orange-txt">- основа результата.</span>
         </p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/res-bg.jpg" alt="res">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/mission.png" alt="res">
+                </div>
+            </div>
+        </div>
     </div>
 
     <section class="faq-section faq cont">
@@ -296,7 +315,7 @@
             - управлять жизнью.</p>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-top">
             <div class="footer-left">
                 <img src="images/logo-2.png" alt="logo">
@@ -344,7 +363,17 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
 
 </html>
