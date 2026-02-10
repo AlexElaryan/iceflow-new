@@ -1418,9 +1418,8 @@ footer a {
     }
 
     .prod-image img {
-        /* width: 59px; */
-        height: 195px;
-        width: fit-content;
+        width: 135px;
+        /* height: 195px; */
         object-fit: cover;
         left: 70%;
         top: 90px;
