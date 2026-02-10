@@ -657,6 +657,7 @@ footer a {
 .states p {
     white-space: pre-line;
     /* text-align: right; */
+    display: block;
 }
 
 .states-right>div {
