@@ -55,9 +55,11 @@ a {
     background: #DBDBDB;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     border: none;
     border-radius: 10px;
+    color: #1A1E1C;
 }
 
 .black-btn {
@@ -1142,5 +1144,21 @@ footer a {
 
     .intro-bottom h2 span {
         flex-shrink: 0;
+    }
+
+    .input-type-1, .input-type-1::placeholder {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-height:700px) {
+    .intro-bottom {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-height:620px) {
+    .intro-bottom {
+        margin-top: 40px;
     }
 }
