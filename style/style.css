@@ -463,13 +463,13 @@ header nav ul li a {
     line-height: 24px;
 }
 
-details:open summary,
-details:open svg rect {
+details[open] summary,
+details[open] svg rect {
     color: #FF5A39;
     fill: #FF5A39;
 }
 
-details:open svg {
+details[open] svg {
     transform: rotate(180deg);
 }
 
@@ -952,14 +952,14 @@ footer a {
     height: fit-content;
 }
 
-.flow-faq details:open summary,
-.flow-faq details:open svg rect {
+.flow-faq details[open] summary,
+.flow-faq details[open] svg rect {
     color: #FBC402;
     fill: #FBC402;
 }
 
-.zen-faq details:open summary,
-.zen-faq details:open svg rect {
+.zen-faq details[open] summary,
+.zen-faq details[open] svg rect {
     color: #790047;
     fill: #790047;
 }
