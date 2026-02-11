@@ -219,7 +219,7 @@ header nav ul li a {
     align-self: flex-end;
 }
 
-.intro-bottom button {
+.intro-bottom .grey-btn {
     margin-top: 28px;
     width: fit-content;
     align-self: flex-end;
@@ -228,6 +228,7 @@ header nav ul li a {
     border: 1px solid #FF5A39;
     border-radius: 60px;
     font-size: 33px;
+    color: #FF5A39;
 }
 
 .title {
@@ -1106,7 +1107,7 @@ footer a {
         left: -50%;
     }
 
-    .intro-bottom button {
+    .intro-bottom .grey-btn {
         font-size: 28px;
     }
 }
@@ -1159,7 +1160,7 @@ footer a {
         font-size: 18px;
     }
 
-    .intro-bottom button {
+    .intro-bottom .grey-btn {
         font-size: 26px;
     }
 }
@@ -1251,7 +1252,7 @@ footer a {
         flex-direction: column;
         position: absolute;
         left: 0;
-        top: 70px;
+        top: 65px;
         width: 100%;
         background: #f5f4f0;
         align-items: center;
@@ -1355,7 +1356,7 @@ footer a {
         margin-bottom: 10px;
     }
 
-    .intro-bottom button {
+    .intro-bottom .grey-btn {
         width: 100%;
         justify-content: center;
         background: none;
@@ -1743,12 +1744,12 @@ footer a {
         display: none !important;
     }
 
-    .intro-bottom button {
+    .intro-bottom .grey-btn {
         font-size: 14px;
         padding: 7px;
     }
 
-    .intro-bottom button img {
+    .intro-bottom .grey-btn img {
         width: 13px;
     }
 
@@ -1955,7 +1956,7 @@ footer a {
         padding: 6.5px 0;
     }
 
-    .intro-bottom button {
+    .intro-bottom .grey-btn {
         padding: 0;
     }
 
@@ -1996,7 +1997,7 @@ footer a {
     }
 
     .condition-item button {
-        font-size: 14px;
+        font-size: 12px;
         padding: 5.5px;
     }
 
