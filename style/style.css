@@ -91,7 +91,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: #f5f4f0cc;
     z-index: 1111;
 }
 
@@ -797,6 +797,7 @@ footer a {
     flex-direction: column;
     gap: 40px;
     padding-bottom: 40px;
+    padding-top: 100px;
 }
 
 .catalog-top {
@@ -1236,6 +1237,11 @@ footer a {
         padding: 3px 13px;
     }
 
+    header {
+        padding: 30px 24px;
+        padding-bottom: 10px;
+    }
+
     header>div>.header-right {
         display: none;
     }
@@ -1247,7 +1253,7 @@ footer a {
         left: 0;
         top: 70px;
         width: 100%;
-        background: #fff;
+        background: #f5f4f0;
         align-items: center;
         padding: 30px;
         gap: 20px;
@@ -1265,6 +1271,7 @@ footer a {
 
     header nav ul {
         padding: 0;
+        background: none;
         flex-direction: column;
     }
 
@@ -1282,7 +1289,7 @@ footer a {
 
     .intro {
         padding: 30px 24px;
-        padding-top: 100px;
+        padding-top: 60px;
         display: flex;
         flex-direction: column;
         min-height: unset;
@@ -1851,6 +1858,7 @@ footer a {
     .res {
         height: 668px;
     }
+
     .res img {
         object-position: unset;
     }
@@ -1871,7 +1879,7 @@ footer a {
 
     .text-24,
     .catalog-bottom_top div span {
-        font-size: 11px;
+        font-size: 20px;
     }
 
     .footer-right {
