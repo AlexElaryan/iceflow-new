@@ -83,9 +83,16 @@ a {
 }
 
 header {
+    width: 100%;
+    padding: 27px 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #fff;
+    z-index: 1111;
 }
 
 header>div {
@@ -339,27 +346,27 @@ header nav ul li a {
     fill: #fff;
 }
 
-.condition .condition-item:first-of-type:hover {
+.condition .condition-item.o:hover {
     background: #FF5A39;
 }
 
-.condition .condition-item:first-of-type:hover button {
+.condition .condition-item.y:hover button {
     color: #FF5A39;
 }
 
-.condition .condition-item:nth-of-type(2):hover {
+.condition .condition-item.y:hover {
     background: #FBC402;
 }
 
-.condition .condition-item:nth-of-type(2):hover button {
+.condition .condition-item.y:hover button {
     color: #FBC402;
 }
 
-.condition .condition-item:last-of-type:hover {
+.condition .condition-item.p:hover {
     background: #790047;
 }
 
-.condition .condition-item:last-of-type:hover button {
+.condition .condition-item.p:hover button {
     color: #790047;
 }
 
@@ -1275,6 +1282,7 @@ footer a {
 
     .intro {
         padding: 30px 24px;
+        padding-top: 100px;
         display: flex;
         flex-direction: column;
         min-height: unset;
@@ -1380,18 +1388,6 @@ footer a {
 
     .condition-item button {
         margin-top: 10px;
-    }
-
-    .condition-item:first-of-type {
-        border: 1px solid #FF5A39;
-    }
-
-    .condition-item:nth-of-type(2) {
-        border: 1px solid #FBC402;
-    }
-
-    .condition-item:last-of-type {
-        border: 1px solid #790047;
     }
 
     .res p {
@@ -1921,7 +1917,7 @@ footer a {
     }
 
     .intro-bottom .text-24 {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .intro-bottom>div>img {

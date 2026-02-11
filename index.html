@@ -40,7 +40,6 @@
                         </div>
                     </div>
                 </nav>
-                <button class="orange-btn">Купить на Ozon</button>
                 <div class="header-right">
                     <div class="socials">
                         <a href="https://www.instagram.com/iceflow.pro/">
@@ -104,7 +103,7 @@
             состояние.</p>
         <div class="swiper swiper-cond">
             <div class="swiper-wrapper">
-                <div class="condition-item swiper-slide">
+                <div class="condition-item o swiper-slide">
                     <div class="condition-item_top">
                         <svg width="60" height="73" viewBox="0 0 60 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -130,7 +129,7 @@
 
                     <button class="orange-b-btn">Я ВЫБИРАЮ СОСТОЯНИЕ RECOVERY</button>
                 </div>
-                <div class="condition-item swiper-slide">
+                <div class="condition-item y swiper-slide">
                     <div class="condition-item_top">
                         <svg width="64" height="63" viewBox="0 0 64 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -154,7 +153,7 @@
 
                     <button class="yellow-b-btn">Я ВЫБИРАЮ СОСТОЯНИЕ FLOW</button>
                 </div>
-                <div class="condition-item swiper-slide">
+                <div class="condition-item p swiper-slide">
                     <div class="condition-item_top">
                         <svg width="74" height="63" viewBox="0 0 74 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -225,7 +224,7 @@
 
     <section class="mission cont">
         <p class="text-48"><span class="orange-txt">МИССИЯ ICEFLOw</span>
-            - Система IceFlow
+            Система IceFlow
             возвращает доступ
             к собственному ресурсу
             и помогает видеть своё
@@ -450,6 +449,7 @@
             <div class="footer-right">
                 <nav>
                     <ul>
+                        <li class="mob"><a class="text-24" href>Социальные сети</a></li>
                         <li><a class="text-24" href>Товары</a></li>
                         <li><a class="text-24" href>О нас</a></li>
                         <li><a class="text-24" href>Часто задаваемые вопросы</a></li>
@@ -498,6 +498,7 @@
                 swiper2 = new Swiper('.swiper-cond', {
                     loop: true,
                     spaceBetween: 20,
+                    slidesPerView: 1.2,
                     navigation: {
                         nextEl: '.cond-swiper-button-next',
                         prevEl: '.cond-swiper-button-prev',
