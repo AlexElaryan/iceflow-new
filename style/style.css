@@ -216,6 +216,11 @@ header nav ul li a {
     margin-top: 28px;
     width: fit-content;
     align-self: flex-end;
+    background: none;
+    padding: 7.5px 45px;
+    border: 1px solid #FF5A39;
+    border-radius: 60px;
+    font-size: 33px;
 }
 
 .title {
@@ -237,6 +242,7 @@ header nav ul li a {
 }
 
 .condition {
+    padding: 100px;
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
@@ -251,39 +257,55 @@ header nav ul li a {
     margin-top: 20px;
 }
 
-.condition>div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 40px;
-    gap: 80px;
-    position: relative;
+
+@media screen and (min-width:1000px) {
+    .condition>div>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40px;
+        gap: 80px;
+        position: relative;
+    }
 }
 
-.condition>div::after {
-    width: 755px;
-    height: 767px;
-    content: '';
-    backdrop-filter: blur(34px);
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    background: url(../images/cond-bg.png);
-    background-size: cover;
-    z-index: -1;
-}
 
 .condition-item {
     background: #FFFFFF4D;
-    padding: 30px 30px 20px 30px;
+    padding: 30px 14px;
     border-radius: 10px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
 
-.condition-item>.text-33, .condition-item>div>.text-33 {
+.condition-item>.text-33,
+.condition-item>div>.text-33 {
     text-transform: uppercase;
     white-space: pre-line;
+    font-size: 30px;
+}
+
+.condition-item_top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.orange-b-btn,
+.yellow-b-btn,
+.purple-b-btn {
+    padding: 12px;
+    border-radius: 60px;
+    border: 1px solid #FF5A39;
+    background: none;
+    font-size: 16px;
+}
+
+.yellow-b-btn {
+    border-color: #FBC402;
+}
+
+.purple-b-btn {
+    border-color: #790047;
 }
 
 .condition-item .text-24 {
@@ -298,6 +320,14 @@ header nav ul li a {
 }
 
 .condition .condition-item:hover {
+    color: #fff;
+}
+
+.condition .title.desktop {
+    display: block !important;
+}
+
+.condition .condition-item:hover .text-33 span {
     color: #fff;
 }
 
@@ -348,16 +378,18 @@ header nav ul li a {
 
 .res {
     display: flex;
-    justify-content: center;
-    padding-top: 296px;
-    min-height: 100vh;
+    justify-content: flex-end;
+    height: 100vh;
     background: url(../images/res-bg.jpg);
     background-size: cover;
     position: relative;
 }
 
-.res .swiper {
+.swiper {
     width: 100%;
+}
+
+.res .swiper {
     color: #fff;
     position: absolute;
     inset: 0;
@@ -367,6 +399,7 @@ header nav ul li a {
 .res img {
     width: 100%;
     height: 100%;
+    object-position: right;
     object-fit: cover;
 }
 
@@ -375,19 +408,62 @@ header nav ul li a {
     z-index: 1;
 }
 
-.res::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #1A1E1C99;
-    z-index: 1;
+.swiper-btn {
+    width: 60px !important;
+    height: 63px !important;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    right: auto !important;
 }
+
+.swiper-btn svg {
+    width: 13px !important;
+    height: 25px !important;
+}
+
+.swiper-btn::after {
+    display: none;
+}
+
+.swiper-control {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.res-control {
+    bottom: 44px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.res-right {
+    padding: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #1A1E1C;
+    max-width: 588px;
+    height: 100%;
+    position: relative;
+    z-index: 11;
+}
+
 
 .res p {
     text-transform: uppercase;
     z-index: 1;
     color: #fff;
-    font-size: 72px;
+    font-size: 40px;
     text-align: center;
     white-space: pre-line;
 }
@@ -419,6 +495,8 @@ header nav ul li a {
 }
 
 .faq button {
+    color: #fff;
+    width: 100%;
     margin-top: 54px;
 }
 
@@ -487,19 +565,29 @@ details[open] svg {
 }
 
 .mission {
-    min-height: 100vh;
+    height: 100vh;
     background: url(../images/mission.png);
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 70px;
+    position: relative;
+}
+
+.mission::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #1A1E1C4F;
+    z-index: 0;
 }
 
 .mission p {
     color: #fff;
     text-transform: uppercase;
     white-space: pre-line;
+    z-index: 1;
 }
 
 .mission p:last-of-type {
@@ -637,19 +725,10 @@ footer a {
 }
 
 .states {
-    padding: 124px;
-    background: url(../images/states-bg.png);
+    padding: 156px 0;
 }
 
 .states>div {
-    padding: 27px 99px;
-    background: #f5f4f0c5;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 62px;
-}
-
-.states>div>div {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
 }
@@ -664,6 +743,12 @@ footer a {
     display: flex;
     flex-direction: column;
     gap: 90px;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.states-right>div>p:last-of-type {
+    text-transform: lowercase;
 }
 
 .states .title {
@@ -684,8 +769,10 @@ footer a {
     font-size: 33px;
     border-radius: 10px;
     text-transform: uppercase;
-    background: transparent;
-    border: 2px solid #FF5A39;
+    border-radius: 60px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 .states-left {
@@ -977,7 +1064,7 @@ footer a {
         gap: 20px;
     }
 
-    .condition>div {
+    .condition>div>div {
         gap: 40px;
     }
 
@@ -1010,6 +1097,10 @@ footer a {
     .flow-image img {
         left: -50%;
     }
+
+    .intro-bottom button {
+        font-size: 28px;
+    }
 }
 
 
@@ -1018,7 +1109,7 @@ footer a {
         gap: 30px;
     }
 
-    .condition>div {
+    .condition>div>div {
         gap: 20px;
     }
 
@@ -1058,6 +1149,22 @@ footer a {
 
     .states button {
         font-size: 18px;
+    }
+
+    .intro-bottom button {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+
+    .condition-item>.text-33,
+    .condition-item>div>.text-33 {
+        font-size: 20px;
+    }
+
+    .condition-item .text-24 {
+        font-size: 20px;
     }
 }
 
@@ -1107,6 +1214,15 @@ footer a {
 .desktop {
     display: flex;
 }
+
+.swiper-control.cond-control {
+    display: none !important;
+}
+
+.swiper-control.cond-control .swiper-btn {
+    border-color: #000;
+}
+
 
 @media screen and (max-width:1000px) {
     .orange-btn {
@@ -1160,25 +1276,23 @@ footer a {
     .intro {
         padding: 30px 24px;
         display: flex;
-        height: 700px;
         flex-direction: column;
         min-height: unset;
+        height: fit-content;
     }
 
     .intro-content {
-        /* height: calc(100vh - 90px); */
-        /* min-height: 600px; */
-        /* height: 700px; */
         padding: 0 !important;
         flex-grow: 1;
-        justify-content: flex-end;
-        padding-top: 50px !important;
+        padding-top: 10px !important;
+    }
+
+    .intro-top>p {
+        line-height: 20px;
     }
 
     .intro-top>img {
-        width: 100%;
-        max-width: 100%;
-        height: fit-content;
+        display: none;
     }
 
     body {
@@ -1194,7 +1308,7 @@ footer a {
     }
 
     .intro-bottom {
-        margin-top: 120px;
+        margin-top: 49px;
     }
 
     .mob {
@@ -1208,11 +1322,13 @@ footer a {
 
     .intro-bottom>h2 {
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     .intro-bottom h2 span {
         color: #1A1E1C;
         font-size: 15px;
+        margin: 0;
     }
 
     .intro-bottom .text-24 {
@@ -1231,15 +1347,12 @@ footer a {
     }
 
     .intro-bottom>div {
-        margin-top: 30px;
+        margin-top: 20px;
+        flex-direction: column;
     }
 
     .condition {
         padding-bottom: 30px;
-    }
-
-    .condition>div {
-        grid-template-columns: 1fr;
     }
 
     .condition-item {
@@ -1342,8 +1455,14 @@ footer a {
 
     .mission {
         padding: 24px;
+        padding-bottom: 72px;
         gap: 39px;
         background-position: center;
+    }
+
+    .mission::before {
+        background: linear-gradient(0.01deg, #000000 0.01%, #0D0F0E 37.05%, rgba(26, 30, 28, 0) 74.1%);
+
     }
 
     .mission p {
@@ -1429,13 +1548,11 @@ footer a {
         overflow: hidden;
     }
 
-    /* .states {
-        height: 100vh;
-    } */
 
     .states-left img {
         margin: auto;
-        margin-top: 49px;
+        width: 223px;
+        margin-top: 40px;
     }
 
     .states>div {
@@ -1622,6 +1739,133 @@ footer a {
     .desktop {
         display: none !important;
     }
+
+    .intro-bottom button {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .intro-bottom button img {
+        width: 13px;
+    }
+
+    .condition-item>div>.text-33 {
+        font-size: 20px;
+    }
+
+    .condition-item>div {
+        align-items: center;
+    }
+
+    .condition-item_top svg {
+        width: 45px;
+    }
+
+    .condition-item {
+        border-color: #fff !important;
+        padding: 22px;
+    }
+
+    .condition-item button {
+        font-size: 14px;
+    }
+
+    .title {
+        letter-spacing: 0px;
+    }
+
+    .condition .title.desktop {
+        display: none !important;
+    }
+
+    .condition .title.mob {
+        display: block !important;
+    }
+
+    .swiper-cond {
+        margin-top: 35px;
+    }
+
+    .condition>div>div {
+        gap: 0;
+    }
+
+
+    .swiper-control.cond-control {
+        display: flex !important;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .states>div {
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .states button {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 31px;
+    }
+
+    .states {
+        padding: 42px 37px;
+    }
+
+    .states .text-33 {
+        text-align: right;
+        max-width: 225px;
+        align-self: flex-end;
+    }
+
+    .res {
+        flex-direction: column;
+    }
+
+    .res-right {
+        width: 100%;
+        height: 224px;
+        max-height: 224px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .swiper-btn {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .swiper-control .swiper-btn svg {
+        width: 5px !important;
+        height: 9px !important;
+    }
+
+    .res-control {
+        transform: unset;
+        gap: 6px;
+        position: relative;
+        bottom: auto;
+        left: auto;
+    }
+
+    .res {
+        height: 668px;
+    }
+    .res img {
+        object-position: unset;
+    }
+
+    .res .swiper {
+        height: 444px;
+    }
+
+    .faq button {
+        height: 31px;
+    }
 }
 
 @media screen and (max-width:769px) {
@@ -1672,7 +1916,8 @@ footer a {
 
     .condition .substitle {
         margin-top: 10px;
-        font-size: 11px;
+        font-size: 12px;
+        line-height: 12px;
     }
 
     .intro-bottom .text-24 {
@@ -1680,11 +1925,13 @@ footer a {
     }
 
     .intro-bottom>div>img {
-        max-width: 114px;
-        height: 142px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0px -55px;
+        max-height: 225px;
+        /* height: 142px; */
     }
 
-    .condition>div::after,
     .catalog-bottom::after {
         width: 100%;
         height: 335px;
@@ -1696,16 +1943,12 @@ footer a {
         transform: translateY(-50%) translateX(-50%);
     }
 
+
     .condition>button {
         margin-top: 11px;
         font-size: 14px;
         width: 100%;
         padding: 6.5px 0;
-    }
-
-    .condition>div {
-        margin-top: 10px;
-        gap: 5px;
     }
 
     .intro-bottom button {
@@ -1739,14 +1982,18 @@ footer a {
         font-size: 12px;
     }
 
+    .condition-item {
+        height: 422px !important;
+    }
+
     .condition-item .text-24 {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 6px;
     }
 
     .condition-item button {
-        font-size: 11px;
-        padding: 1px;
+        font-size: 14px;
+        padding: 5.5px;
     }
 
     .catalog-item>img {
